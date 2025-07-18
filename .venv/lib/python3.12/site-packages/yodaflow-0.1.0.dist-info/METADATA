@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: yodaflow
+Version: 0.1.0
+Summary: A lightweight declarative workflow engine with RBAC and CLI
+Author-email: Adryan Taborda <adryanftaborda@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: typer>=0.16.0
+Requires-Dist: rich>=14.0.0
+Requires-Dist: fastapi>=0.116.1
+Requires-Dist: pydantic>=2.11.7
+Requires-Dist: anyio>=4.9.0
+Requires-Dist: starlette>=0.47.1
+Requires-Dist: requests>=2.32.4
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: mypy>=1.17.0; extra == "dev"
+Requires-Dist: ruff>=0.12.4; extra == "dev"
+Requires-Dist: build>=1.2.2; extra == "dev"
+Requires-Dist: twine>=6.1.0; extra == "dev"
+Provides-Extra: api
+Requires-Dist: fastapi>=0.116.1; extra == "api"
+Requires-Dist: uvicorn>=0.30.1; extra == "api"
+Dynamic: license-file
+
+# yodaflow
