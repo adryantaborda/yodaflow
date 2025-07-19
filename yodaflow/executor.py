@@ -1,6 +1,7 @@
 from yodaflow.loader import load_workflow
 from typing import Dict, Any
 from yodaflow.exceptions import WorkflowValidationError
+from yodaflow.rbac import can_execute
 
 def validate_workflow(workflow: Dict[str, Any]) -> None:
     if "name" not in workflow:
@@ -15,3 +16,4 @@ def validate_workflow(workflow: Dict[str, Any]) -> None:
             raise WorkflowValidationError(f"Step {step['name']} has no 'action'")
         if "required_role" not in step:
             raise WorkflowValidationError(f"Step {step['name']} has no 'required_role'")
+

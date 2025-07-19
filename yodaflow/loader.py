@@ -9,9 +9,9 @@ def load_workflow(yaml_path: str) -> Dict[str, Any]:
         with open(yaml_path, 'r') as file:
             workflow = yaml.safe_load(file)
             if not isinstance(workflow, dict):
-                raise WorkflowValidationError("...")
+                raise WorkflowValidationError(f"Workflow {workflow} is not a dictionary instance.")
         return workflow
     except FileNotFoundError:
-        raise WorkflowValidationError("...")
+        raise WorkflowValidationError(f"Workflow {workflow} not found.")
     except yaml.YAMLError as e:
         raise WorkflowValidationError(e)
